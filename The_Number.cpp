@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+using namespace std;
 
 int main()
 {
@@ -13,7 +14,7 @@ int main()
         	if(str[i]==x1&&str[i+1]==x2)
         		count++;
     	}
-    	printf("%d\n",count);
+    	cout << count << endl;
     }
 
     return 0;
