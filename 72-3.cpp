@@ -13,7 +13,7 @@ int main(){
                 i-=x;
             }
             if(f==0&&i%x==j){
-                cout << ' ' << b[i];
+                cout << b[i];
                 i-=x;
                 f=1;
             }
