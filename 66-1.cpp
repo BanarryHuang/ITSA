@@ -6,7 +6,7 @@ int main()
     char det[]=" ,";
     char *token;
     char a[210];
-    while(gets(a)!=NULL){
+    while(fgets(a,210,stdin)!=NULL){
         co=0;
         token=strtok(a,det);
         while(token!=NULL){
