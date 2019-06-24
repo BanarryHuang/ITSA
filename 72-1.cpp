@@ -11,10 +11,11 @@ int main(){
             break;
         }
     }
-    if(x==1) f=0;
+    if(x==1)
+        f=0;
     if(f)
-        printf("YES\n");
+        cout << "YES\n";
     else
-        printf("NO\n");
+        cout << "NO\n";
     }
 }
