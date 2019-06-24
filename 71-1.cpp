@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
+using namespace std;
 
 int main()
 {
     int i,j,a,s,d,f,q,w,e,r,A,B;
-    scanf("%d",&i);
+    cin >> i;
     a=i/1000;
     s=i%1000/100;
     d=i%100/10;
@@ -26,7 +27,7 @@ int main()
         if(s==q||s==e||s==r) B++;
         if(d==w||d==q||d==r) B++;
         if(f==w||f==e||f==q) B++;
-        printf("%dA%dB\n",A,B);
+        cout << A << 'A' << B << 'B' << endl;
     }
 
     return 0;
