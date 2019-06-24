@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
-
+using namespace std;
 int main()
 {
-    int T,x;
-    scanf("%d",&T);
+    int T,x,i;
+    cin >> T;
     while(T--){
-        scanf("%d",&x);
+        cin >> x;
         if(x==49){
             printf("IL\n");
             continue;
@@ -14,41 +14,45 @@ int main()
             printf("ID\n");
             continue;
         }
-        if(x/100!=0){
-            if(x/100==1)printf("C");
-            if(x/100==2)printf("CC");
-            if(x/100==3)printf("CCC");
-            if(x/100==4)printf("CD");
-            if(x/100==5)printf("D");
-            if(x/100==6)printf("DC");
-            if(x/100==7)printf("DCC");
-            if(x/100==8)printf("DCCC");
-            if(x/100==9)printf("CM");
+        if(x/100<9){
+            if(x%10==4)
+                cout << 'C';
+            else if(x/10>3){
+                x-=5;
+                cout << 'D';
+            }
+            if(x>0)
+                for(i=0;i<x/10;i++)
+                    cout << 'C';
         }
         x%=100;
-        if(x/10!=0){
-            if(x/10==1)printf("X");
-            if(x/10==2)printf("XX");
-            if(x/10==3)printf("XXX");
-            if(x/10==4)printf("XL");
-            if(x/10==5)printf("L");
-            if(x/10==6)printf("LX");
-            if(x/10==7)printf("LXX");
-            if(x/10==8)printf("LXXX");
-            if(x/10==9)printf("XC");
+        if(x%10==9)
+            cout << "CL";
+        if(x/10<9){
+            if(x%10==4)
+                cout << 'X';
+            else if(x/10>3){
+                x-=5;
+                cout << 'L';
+            }
+            if(x>0)
+                for(i=0;i<x/10;i++)
+                    cout << 'X';
         }
-        if(x%10!=0){
-            if(x%10==1)printf("I");
-            if(x%10==2)printf("II");
-            if(x%10==3)printf("III");
-            if(x%10==4)printf("IV");
-            if(x%10==5)printf("V");
-            if(x%10==6)printf("VI");
-            if(x%10==7)printf("VII");
-            if(x%10==8)printf("VIII");
-            if(x%10==9)printf("IX");
+        if(x%10==9)
+            cout << "IX";
+        if(x%10<9){
+            if(x%10==4)
+                cout << 'I';
+            else if(x%10>3){
+                x-=5;
+                cout << 'V';
+            }
+            if(x>0)
+                for(i=0;i<x%10;i++)
+                    cout << 'I';
         }
-        printf("\n");
+        cout << endl;
     }
 
     return 0;
