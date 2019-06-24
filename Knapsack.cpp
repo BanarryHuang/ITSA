@@ -13,7 +13,7 @@ int main(){
 
     cin >> N;
 
-    for(i=0;i<n;i++)
+    for(i=0;i<N;i++)
         for(j=1;j<=n;j++)
             w[i][j]=0;
 
