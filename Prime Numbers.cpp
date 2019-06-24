@@ -20,7 +20,7 @@ int main()
                 if(flag)
                     n++;
             }
-            cout << n;
+            cout << n << endl;
         }
     }
     return 0;
