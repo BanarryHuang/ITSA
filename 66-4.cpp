@@ -6,19 +6,16 @@ int main()
     cin >> T;
     while(T--){
         cin >> x;
-        if(x==49){
-            printf("IL\n");
-            continue;
-        }
-        if(x==499){
-            printf("ID\n");
-            continue;
-        }
+        if(x/100==9)
+            cout << "CM";
         if(x/100<9){
             if(x/100==4)
                 cout << 'C';
-            else if(x/100>3){
-                x-=500;
+            if(x/100>3){
+                if(x/100==4)
+                	x-=400;
+                else
+                	x-=500;
                 cout << 'D';
             }
             if(x/100>0)
@@ -27,12 +24,15 @@ int main()
         }
         x%=100;
         if(x/10==9)
-            cout << "CL";
+            cout << "XC";
         if(x/10<9){
             if(x/10==4)
                 cout << 'X';
-            else if(x/10>3){
-                x-=50;
+            if(x/10>3){
+                if(x/10==4)
+                	x-=40;
+                else
+                	x-=50;
                 cout << 'L';
             }
             if(x/10>0)
@@ -44,7 +44,7 @@ int main()
         if(x%10<9){
             if(x%10==4)
                 cout << 'I';
-            else if(x%10>3){
+            if(x%10>3){
                 x-=5;
                 cout << 'V';
             }
