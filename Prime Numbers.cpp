@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
-
+using namespace std;
 int main()
 {
     int p,i,j,flag,n;
     while(1){
         n=0;
-        scanf("%d",&p);
+        cin >> p;
         if(p==0)
             break;
         else{
@@ -20,7 +20,7 @@ int main()
                 if(flag)
                     n++;
             }
-            printf("%d\n",n);
+            cout << n;
         }
     }
     return 0;
