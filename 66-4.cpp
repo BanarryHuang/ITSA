@@ -15,27 +15,27 @@ int main()
             continue;
         }
         if(x/100<9){
-            if(x%10==4)
+            if(x/100==4)
                 cout << 'C';
-            else if(x/10>3){
-                x-=5;
+            else if(x/100>3){
+                x-=500;
                 cout << 'D';
             }
-            if(x>0)
-                for(i=0;i<x/10;i++)
+            if(x/100>0)
+                for(i=0;i<x/100;i++)
                     cout << 'C';
         }
         x%=100;
-        if(x%10==9)
+        if(x/10==9)
             cout << "CL";
         if(x/10<9){
-            if(x%10==4)
+            if(x/10==4)
                 cout << 'X';
             else if(x/10>3){
-                x-=5;
+                x-=50;
                 cout << 'L';
             }
-            if(x>0)
+            if(x/10>0)
                 for(i=0;i<x/10;i++)
                     cout << 'X';
         }
