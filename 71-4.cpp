@@ -18,8 +18,9 @@ int main()
         for(j=S[s-1]+1;j<S[s];j++)
             T[t++]=j;
     }
-    while(scanf("%d",&a)!=EOF){
-        printf("%d\n",S[a]);
+    while(!cin.eof()){
+        cin >> a;
+        cout << S[a] << endl;
     }
 
     return 0;
