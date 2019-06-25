@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-
+using namespace std;
 int main()
 {
     int i,j,s=1,t=1,a;
