@@ -4,10 +4,13 @@ int main(){
     int i,j,x,f;
     char b[300],d[30];
     fgets(b,300,stdin);
+    for(i=0;i<strlen(b);i++)
+    	if(b[i]=='\n'||b[i]=='\r')
+    		b[i]=0;
     cin >> d >> x;
     for(j=0;j<x;j++){
         f=0;
-        for(i=strlen(b)-2;i>-1;){
+        for(i=strlen(b)-1;i>-1;){
             if(f==1&&i%x==j){
                 cout << d[0] << b[i];
                 i-=x;
