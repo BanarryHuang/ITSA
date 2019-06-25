@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 void replaceD(string &str){
     int i = 0;
