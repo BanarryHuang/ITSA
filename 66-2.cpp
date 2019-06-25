@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-
+using namespace std;
 int main(){
 
     int i,j,k,flag;
@@ -8,10 +8,11 @@ int main(){
     while(1){
         flag=1;
         for(i=0;i<5;i++){
-            if(scanf("%s",a[i])==EOF){
+            if(cin.eof()){
                 flag=0;
                 break;
             }
+            cin >> a[i];
         }
         if(!flag)
             break;
@@ -81,7 +82,7 @@ int main(){
                     break;
             }
         }
-        printf("%.1f\n",f);
+        cout  <<  setprecision(1)  << f;
     }
     return 0;
 }
