@@ -5,17 +5,9 @@ int main(){
     int i,j,k,flag;
     double f;
     char a[5][10];
-    while(1){
-        flag=1;
-        for(i=0;i<5;i++){
-            if(cin.eof()){
-                flag=0;
-                break;
-            }
+    while(!cin.eof()){
+        for(i=0;i<5;i++)
             cin >> a[i];
-        }
-        if(!flag)
-            break;
         if(a[0][0]=='x'){
             j=atoi(a[4]);
             k=atoi(a[2]);
@@ -82,7 +74,7 @@ int main(){
                     break;
             }
         }
-        cout  <<  setprecision(1)  << f;
+        cout  << fixed << setprecision(1) << f << endl;
     }
     return 0;
 }
