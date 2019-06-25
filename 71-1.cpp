@@ -12,7 +12,7 @@ int main()
 
     while(1){
         A=0;B=0;
-        scanf("%d",&j);
+        cin >> j;
         q=j/1000;
         w=j%1000/100;
         e=j%100/10;
