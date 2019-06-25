@@ -15,14 +15,11 @@ int main()
             token=strtok(NULL,det);
         }
         maxi=0;
-        for(i=co-1;i>0;i--){
-        for(j=0;j<i;j++) for(k=j+1;k<=i;k++)
-            if(c[j]>c[k]){
-                temp = c[k];
-                c[k] = c[j];
-                c[j] = temp;
-            }
-        }
+        for(i=co-1;i>0;i--)
+            for(j=0;j<i;j++)
+                for(k=j+1;k<=i;k++)
+                    if(c[j]>c[k])
+                        swap(c[k],c[j]);
         temp=0;
         for(i=0;i<co-1;i++){
             if(c[i+1]==c[i])
