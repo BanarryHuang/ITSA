@@ -1,18 +1,20 @@
 #include <bits/stdc++.h>
-
+using namespace std;
 int e=0,Per[300],In[300];
 
 void post(int a, int b, int c, int d)
 {
-	if (a>b) return;
+	if (a>b)
+	    return;
 	int r = c;
-	while (In[r] != Per[a]) r++;
+	while (In[r] != Per[a])
+	    r++;
 	post(a+1, a+r-c, c, r-1);
 	post(a+r-c+1, b, r+1, d);
 	if(e)
-        printf(" %d",Per[a]);
-    else
-        printf("%d",Per[a]);
+            cout << ' ' << Per[a];
+   	else
+            cout << Per[a];
 	e++;
 }
 
@@ -23,37 +25,37 @@ int main()
 	fgets(a,1000,stdin);
 	fgets(b,1000,stdin);
 	for(i=0;i<strlen(a);i++){
-        if(isdigit(a[i])){
-            x[t++]=a[i];
-        }
-        else{
-            if(t>0)
-                Per[p++]=atoi(x);
-            t=0;
-            for(j=0;j<strlen(x);j++)
-                x[j]=0;
-        }
+            if(isdigit(a[i])){
+        	x[t++]=a[i];
+            }
+            else{
+        	if(t>0)
+                    Per[p++]=atoi(x);
+                t=0;
+                for(j=0;j<strlen(x);j++)
+           	    x[j]=0;
+            }
 	}
 	if(t>0)
-        Per[p++]=atoi(x);
-    t=0;
-    for(j=0;j<strlen(x);j++)
-        x[j]=0;
+            Per[p++]=atoi(x);
+    	t=0;
+    	for(j=0;j<strlen(x);j++)
+        	x[j]=0;
 	for(i=0;i<strlen(b);i++){
-        if(isdigit(b[i])){
-            x[t++]=b[i];
-        }
-        else{
-            if(t>0)
-                In[o++]=atoi(x);
-            t=0;
-            for(j=0;j<strlen(x);j++)
-                x[j]=0;
-        }
+            if(isdigit(b[i])){
+           	x[t++]=b[i];
+            }
+            else{
+                if(t>0)
+                    In[o++]=atoi(x);
+                t=0;
+                for(j=0;j<strlen(x);j++)
+                    x[j]=0;
+            }
 	}
 	if(t>0)
-        In[o++]=atoi(x);
-    post(0,p-1,0,p-1);
-    printf("\n");
+            In[o++]=atoi(x);
+        post(0,p-1,0,p-1);
+        cout << endl;
 	return 0;
 }
