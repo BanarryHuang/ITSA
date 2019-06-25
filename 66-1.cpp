@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int i,j,k,maxi,c[1000],temp,num,co;
+    int i,j,k,maxi,c[1000],temp,numi,co;
     char det[]=" ,";
     char *token;
     char a[210];
@@ -31,7 +31,7 @@ int main()
                 temp++;
                 if(temp>maxi){
                     maxi=temp;
-                    num=c[i];
+                    numi=c[i];
                 }
                 temp=0;
             }
@@ -40,13 +40,13 @@ int main()
 
         if(temp>maxi){
                 maxi=temp;
-                num=c[co-1];
+                numi=c[co-1];
                 temp=0;
         }
         if(maxi>(co/2))
-            cout >> num >> endl;
+            cout << numi << endl;
         else
-            cout >> "NO" >> endl;
+            cout << "NO" << endl;
     }
     return 0;
 }
