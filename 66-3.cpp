@@ -9,7 +9,7 @@ int main()
     char path[40];
     char file[40][40];int count=0;
     char *start=path;
-    scanf("%s",path);
+    cin >> path;
     start=strtok(start,deli);
     while(start!=NULL){
         strcpy(file[cont],start);
