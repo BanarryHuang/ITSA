@@ -6,7 +6,7 @@ int main()
     vector <int> s[51];
     cin >> p;
     if(p<0||p>50)
-        cout << "I can only print Pascal's triangle between 0 and 50.";
+        cout << "I can only print Pascal's triangle between 0 and 50." << endl;
     else{
         for(i=0;i<51;i++){
             s[i].push_back(1);
