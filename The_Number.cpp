@@ -11,10 +11,9 @@ int main()
     	char str[8]={0};
     	count=0;
     	cin >> str;
-    	for(i=0;i<7;i++){
+    	for(i=0;i<7;i++)
         	if(str[i]==x1&&str[i+1]==x2)
         		count++;
-    	}
     	cout << count << endl;
     }
 
