@@ -36,6 +36,7 @@ int main()
             cout << "CORRECT!!!" << endl;
         else
             cout << "WRONG!!!" << endl;
+        a.clear();
         n.clear();
     }
     return 0;
