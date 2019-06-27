@@ -16,6 +16,6 @@ int main(){
             all+=x;
             x*=(1.0-p);
         }
-        cout << setprecision(4) << y/all << endl;
+        cout << fixed << setprecision(4) << y/all << endl;
     }
 }
