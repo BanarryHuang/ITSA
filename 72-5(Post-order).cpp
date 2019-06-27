@@ -2,15 +2,15 @@
 using namespace std;
 int e=0,Per[300],In[300];
 
-void post(int a, int b, int c, int d)
+void post(int a, int b, int c)
 {
 	if (a>b)
 	    return;
 	int r = c;
 	while (In[r] != Per[a])
 	    r++;
-	post(a+1, a+r-c, c, r-1);
-	post(a+r-c+1, b, r+1, d);
+	post(a+1, a+r-c, c);
+	post(a+r-c+1, b, r+1);
 	if(e)
             cout << ' ' << Per[a];
    	else
@@ -55,7 +55,7 @@ int main()
 	}
 	if(t>0)
             In[o++]=atoi(x);
-        post(0,p-1,0,p-1);
+        post(0,p-1,0);
         cout << endl;
 	return 0;
 }
