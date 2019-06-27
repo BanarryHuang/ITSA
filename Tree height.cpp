@@ -2,8 +2,7 @@
 using namespace std;
 int e=0,Per[300],In[300],h[300]={0};
 
-void post(int a, int b, int c)
-{
+void post(int a, int b, int c){
 	if (a>b)
 	    return;
 	int r = c;
@@ -20,7 +19,7 @@ void post(int a, int b, int c)
 
 int main()
 {
-    int i,j,t=0,p=0,o=0,maxi=0;
+	int i,j,t=0,p=0,o=0,maxi=0;
 	char a[1000],b[1000],x[3];
 	fgets(a,1000,stdin);
 	fgets(b,1000,stdin);
@@ -54,12 +53,12 @@ int main()
             }
 	}
 	if(t>0)
-        In[o++]=atoi(x);
-    post(0,p-1,0);
-    for(i=0;i<p;i++){
-        if(h[i]>maxi)
-        	maxi=h[i];
-    }
-    cout << maxi+1 << endl;
+        	In[o++]=atoi(x);
+    	post(0,p-1,0);
+    	for(i=0;i<p;i++){
+        	if(h[i]>maxi)
+        		maxi=h[i];
+   	 }
+   	cout << maxi+1 << endl;
 	return 0;
 }
