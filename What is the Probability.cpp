@@ -9,7 +9,8 @@ int main(){
 
     while(S--){
         cin >> N >> p >> w;
-        all=0;x=1;
+        all=0;
+        x=1;
         for(i=0;i<N;i++){
             if(w-1==i)
                 y=x;
